@@ -41,11 +41,13 @@ const Home = () => {
                 textDecoration: "none",
                 color: "inherit",
                 padding: "10px 20px",
-                backgroundColor: "gold",
+                backgroundColor: "white",
+                border: "2px solid gold",
                 borderRadius: "5px",
                 fontSize: "1.2rem",
                 fontWeight: "bold",
                 cursor: "pointer",
+                
               }}
             >
               Login
