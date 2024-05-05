@@ -5,7 +5,7 @@ import { BrowserRouter } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import { PersistGate } from "redux-persist/integration/react";
 
-import App from "./App.jsx";
+import App from "./components/App.jsx";
 
 import { store, persistor } from "./redux/store.js";
 
