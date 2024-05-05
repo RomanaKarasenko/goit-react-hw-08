@@ -26,7 +26,7 @@ const ContactForm = () => {
       return;
     }
 
-    dispatch(addContact(correctName, number));
+    dispatch(addContact({ name: correctName, number: number }));
     resetForm();
   };
 

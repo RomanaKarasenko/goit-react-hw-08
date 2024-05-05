@@ -6,7 +6,7 @@ import css from "./UserMenu.module.css";
 
 export const UserMenu = () => {
   const dispatch = useDispatch();
-  const { user } = useAuth();
+  const { user, isLoggedIn } = useAuth();
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -16,17 +16,22 @@ export const UserMenu = () => {
 
   return (
     <div className={css.userMenu}>
-      <span className={css.username}>Welcome, User</span>
-      <div onClick={handleMenu} className={css.menuTrigger}>
-        Click here to open menu
-      </div>
-      {isMenuOpen && (
-        <div className={css.menu}>
-          <button onClick={() => dispatch(logOut())} className={css.logoutButton}>
-            Logout
-          </button>
-   
-        </div>
+      {isLoggedIn ? (
+        <>
+          <span className={css.username}>Welcome, {user.name}</span>
+          <div onClick={handleMenu} className={css.menuTrigger}>
+            Click here to open menu
+          </div>
+          {isMenuOpen && (
+            <div className={css.menu}>
+              <button onClick={() => dispatch(logOut())} className={css.logoutButton}>
+                Logout
+              </button>
+            </div>
+          )}
+        </>
+      ) : (
+        <span className={css.username}>Welcome, User</span>
       )}
     </div>
   );
