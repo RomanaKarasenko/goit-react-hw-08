@@ -1,5 +1,5 @@
-import DocumentTitle from '../components/DocumentTitle';
-import RegisterForm from '../components/registerForm/RegisterForm';
+import DocumentTitle from "../components/DocumentTitle";
+import RegisterForm from "../components/registerForm/RegisterForm";
 
 const Register = () => {
   return (

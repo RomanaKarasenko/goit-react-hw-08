@@ -6,7 +6,7 @@ import Layout from "./Layout";
 import Loader from "./loader/Loader";
 import RestrictedRoute from "./RestrictedRoute";
 import PrivateRoute from "./PrivateRoute";
-import { useAuth } from "../hookUseAuth/HookUseAuth";
+import useAuth from "../hookUseAuth/HookUseAuth";
 
 const Home = lazy(() => import("../pages/Home"));
 const Login = lazy(() => import("../pages/Login"));

@@ -1,11 +1,11 @@
-import { createSlice } from '@reduxjs/toolkit';
-import { logOut } from '../auth/operations';
+import { createSlice } from "@reduxjs/toolkit";
+import { logOut } from "../auth/operations";
 import {
   fetchContacts,
   addContact,
   deleteContact,
   editContact,
-} from './operations';
+} from "./operations";
 
 const INITIAL_STATE = {
   items: null,
@@ -23,11 +23,11 @@ const handleRejected = (state, action) => {
 };
 
 const contactsSlice = createSlice({
-  name: 'contacts',
+  name: "contacts",
   initialState: INITIAL_STATE,
   extraReducers: (builder) => {
     builder
-      
+
       .addCase(fetchContacts.pending, handlePending)
       .addCase(fetchContacts.fulfilled, (state, action) => {
         state.isLoading = false;
@@ -36,7 +36,7 @@ const contactsSlice = createSlice({
         state.items = action.payload;
       })
       .addCase(fetchContacts.rejected, handleRejected)
-      
+
       .addCase(addContact.pending, handlePending)
       .addCase(addContact.fulfilled, (state, action) => {
         state.isLoading = false;
@@ -44,7 +44,7 @@ const contactsSlice = createSlice({
         state.items.push(action.payload);
       })
       .addCase(addContact.rejected, handleRejected)
-    
+
       .addCase(deleteContact.pending, handlePending)
       .addCase(deleteContact.fulfilled, (state, action) => {
         state.isLoading = false;
@@ -54,7 +54,7 @@ const contactsSlice = createSlice({
         );
       })
       .addCase(deleteContact.rejected, handleRejected)
-    
+
       .addCase(editContact.pending, handlePending)
       .addCase(editContact.fulfilled, (state, action) => {
         state.isLoading = false;

@@ -1,8 +1,8 @@
-import { useDispatch } from 'react-redux';
-import { register } from '../../redux/auth/operations';
-import css from './RegisterForm.module.css';
+import { useDispatch } from "react-redux";
+import { register } from "../../redux/auth/operations";
+import css from "./RegisterForm.module.css";
 
- const RegisterForm = () => {
+const RegisterForm = () => {
   const dispatch = useDispatch();
 
   const handleSubmit = (e) => {
@@ -39,4 +39,4 @@ import css from './RegisterForm.module.css';
   );
 };
 
-export default RegisterForm
+export default RegisterForm;

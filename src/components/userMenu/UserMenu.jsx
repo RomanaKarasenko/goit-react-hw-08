@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { useAuth } from "../../hookUseAuth/HookUseAuth";
+import  useAuth  from "../../hookUseAuth/HookUseAuth";
 import { logOut } from "../../redux/auth/operations";
 import css from "./UserMenu.module.css";
 
